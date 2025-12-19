@@ -1,25 +1,25 @@
 name: BestSub
-package: lazycat.community.app.bestsub
-version: 1.0.2
+package: community.lazycat.app.bestsub
+version: 1.7.0
 min_os_version: 1.3.8
 description: BestSub 是一个高性能的节点检测，订阅转换服务，基于 Go 语言开发。该项目提供了完整的 Web 界面和 API 接口，支持多种检测项目，多种订阅格式转换，为用户提供便捷的订阅管理解决方案。
 homepage: https://github.com/bestruirui/BestSub
 author: bestruirui
 application:
-    subdomain: bestsub
-    background_task: true
+  subdomain: bestsub
+  background_task: true
 
-    public_path:
-        - /
+  public_path:
+    - /
 
-    upstreams:
-        - location: /
-          backend: http://bestsub:8080/
+  upstreams:
+    - location: /
+      backend: http://bestsub:8080/
 
 services:
-    bestsub:
-        container_name: bestsub
-        # ghcr.io/bestruirui/bestsub:latest
-        image: xget.xi-xu.me/cr/ghcr/bestruirui/bestsub:latest
-        binds:
-            - /lzcapp/var/data:/app/data
+  bestsub:
+    container_name: bestsub
+    #  ghcr.io/bestruirui/bestsub:v1.7.0
+    image: ghcr.1ms.run/bestruirui/bestsub:v1.7.0
+    binds:
+      - /lzcapp/var/data:/app/data
