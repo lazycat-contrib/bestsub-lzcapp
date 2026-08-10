@@ -1,0 +1,40 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/application.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: bestsub
+
+build:
+  run_buildscript: false
+
+images:
+  - id: bestsub
+    target: service
+    service: bestsub
+    source: ghcr.io/bestruirui/bestsub
+    channel: stable
+    sort: semver
+    tag_regex: '^v\d+\.\d+\.\d+$'
+    delivery:
+      mode: mirror
+      image_template: ghcr.1ms.run/bestruirui/bestsub:{tag}
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: BestSub
+    summary: 由 GitHub Actions 自动发布

@@ -1,0 +1,17 @@
+package: community.lazycat.app.bestsub
+version: 1.7.0
+name: BestSub
+description: BestSub 是一个高性能的节点检测和订阅转换服务，提供完整的 Web 界面与 API，支持多种检测项目和订阅格式。
+min_os_version: 1.5.0
+homepage: https://github.com/bestruirui/BestSub
+author: bestruirui
+locales:
+  zh:
+    name: BestSub
+    description: 高性能的节点检测和订阅转换服务。
+  en:
+    name: BestSub
+    description: A high-performance endpoint tester and subscription converter.
+permissions:
+  required:
+    - net.internet
