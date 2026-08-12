@@ -8,7 +8,7 @@ application:
       backend: http://bestsub:8080/
 services:
   bestsub:
-    # upstream: ghcr.io/bestruirui/bestsub:v2.0.0
-    image: ghcr.1ms.run/bestruirui/bestsub:v2.0.0
+    # upstream: ghcr.io/bestruirui/bestsub:v2.0.3
+    image: ghcr.1ms.run/bestruirui/bestsub:v2.0.3
     binds:
       - /lzcapp/var/data:/app/data
