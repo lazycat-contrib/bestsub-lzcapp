@@ -1,5 +1,5 @@
 package: community.lazycat.app.bestsub
-version: 2.0.3
+version: 2.0.4
 name: BestSub
 description: BestSub 是一个高性能的节点检测和订阅转换服务，提供完整的 Web 界面与 API，支持多种检测项目和订阅格式。
 min_os_version: 1.5.0
