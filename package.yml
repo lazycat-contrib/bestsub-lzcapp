@@ -1,4 +1,5 @@
 package: community.lazycat.app.bestsub
+license: GPL-3.0
 version: 2.0.6
 name: BestSub
 description: BestSub 是一个高性能的节点检测和订阅转换服务，提供完整的 Web 界面与 API，支持多种检测项目和订阅格式。
